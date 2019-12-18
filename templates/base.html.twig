@@ -5,9 +5,18 @@
     <title>{% block title %}Welcome!{% endblock %}</title>
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
+
+{#
+        <link rel="stylesheet" href="build/bootstrap.min.css">
+#}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {% endblock %}
 </head>
-<body>
+<body id="page-top">
 {% block body %}{% endblock %}
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}
