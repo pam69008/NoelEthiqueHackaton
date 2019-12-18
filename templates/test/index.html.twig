@@ -4,7 +4,7 @@
 
 {% block body %}
 
-    <header class="masthead sky" style="background-image:url('img/village.jpg'); height:100vh;">
+    <header class="masthead sky" style="background-image:url('img/village.jpg'); height:100vh;" onclick="changeBackground()">
         <div class="container">
             <div class="intro-text textShadoo" style="z-index:10;position:absolute;">
                 <div class="intro-lead-in" ><span>Welcome To Your Merry Christmas!!!</span></div>
@@ -619,6 +619,30 @@
         })();
 
     //    coce Js pour gestion clic
+
+        // url('img/village.jpg')
+
+        var images = ["village.jpg'", "village_rouge2.png"];
+        function changeBackground()
+        {
+            console.log('prout');
+            var i = 0;
+            $('.sky').css("background-image", "url(img/" + images[i] + ")");
+                $('.sky').fadeOut("fast", function () {
+            $(this).css("background-image", "url(img/village_rouge2.png)");
+            $(this).fadeIn("fast");
+        });
+
+            // setInterval(function () {
+            //     i++;
+            //     if (i == images.length) {
+            //         i = 0;
+            //     }
+
+            //     console.log('prout2');
+            // }, 1000);
+
+        }
 
 
     </script>
