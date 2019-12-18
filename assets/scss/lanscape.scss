@@ -1,0 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+body, html {
+    overflow:hidden;
+    margin: 0;
+    height: 100%;
+}
+
+.sky {
+    margin-left: 10%;
+    height:100%;
+    width: 80%;
+    background-image: url('/images/village.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+}

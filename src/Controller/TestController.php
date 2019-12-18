@@ -12,8 +12,14 @@ class TestController extends AbstractController
      */
     public function index()
     {
-        return $this->render('test/index.html.twig', [
-            'controller_name' => 'TestController',
-        ]);
+        return $this->render('test/index.html.twig');
+    }
+
+    /**
+     * @Route("/test/landscape", name="landscape")
+     */
+    public function landscape()
+    {
+        return $this->render('test/village.html.twig');
     }
 }
