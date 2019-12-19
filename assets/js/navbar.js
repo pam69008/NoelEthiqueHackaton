@@ -354,49 +354,62 @@ $(document).ready(function () {
 
 
 //section transport
-document.getElementById("avion").addEventListener("click", function () {
-    document.getElementById("transport-img").src = "img/icone/icons8-aéroport-100.png";
-    document.getElementById("transport-bg").style = "background-color:red";
+
+    document.getElementById("avion").addEventListener("click", function(){
+    document.getElementById("transport-img").src="img/icone/icons8-aéroport-100.png";
+    document.getElementById("transport-bg").style="background-color:red";
+    document.getElementById("value-t").innerHTML = '3';
     document.getElementById("transport-title").innerHTML = "Avion";
     document.getElementById("transport-li").style = "display:block";
     document.getElementById("transport-txt").innerHTML = "285 g de CO2/passager/km pour un avion";
 });
-document.getElementById("velo").addEventListener("click", function () {
-    document.getElementById("transport-img").src = "img/icone/icons8-cyclisme-sur-route-100.png";
-    document.getElementById("transport-bg").style = "background-color:green";
+
+    document.getElementById("velo").addEventListener("click", function(){
+    document.getElementById("transport-img").src="img/icone/icons8-cyclisme-sur-route-100.png";
+    document.getElementById("transport-bg").style="background-color:green";
+    document.getElementById("value-t").innerHTML = '1';
     document.getElementById("transport-title").innerHTML = "Vélo";
     document.getElementById("transport-li").style = "display:block";
     document.getElementById("transport-txt").innerHTML = "Bonne initiative, tu ne perdras pas ton permis";
 
 });
-document.getElementById("voiture").addEventListener("click", function () {
-    document.getElementById("transport-img").src = "img/icone/icons8-voiture-100.png";
-    document.getElementById("transport-bg").style = "background-color:orange";
+
+    document.getElementById("voiture").addEventListener("click", function(){
+    document.getElementById("transport-img").src="img/icone/icons8-voiture-100.png";
+    document.getElementById("transport-bg").style="background-color:orange";
+    document.getElementById("value-t").innerHTML = '2';
     document.getElementById("transport-title").innerHTML = "Voiture";
     document.getElementById("transport-li").style = "display:block";
     document.getElementById("transport-txt").innerHTML = "55 g de CO2/passager/km pour une voiture moyenne";
 
 });
 
-//section cadeaux
-document.getElementById("iphone").addEventListener("click", function () {
-    document.getElementById("cadeaux-img").src = "img/icone/iphone.png";
-    document.getElementById("cadeaux-bg").style = "background-color:red";
+
+    document.getElementById("iphone").addEventListener("click", function(){
+    document.getElementById("cadeaux-img").src="img/icone/iphone.png";
+    document.getElementById("cadeaux-bg").style="background-color:red";
+    document.getElementById("value-c").innerHTML = '3';
+
     document.getElementById("cadeaux-title").innerHTML = "Iphone";
     document.getElementById("cadeaux-li").style = "display:block";
     document.getElementById("cadeaux-txt").innerHTML = "Plus chère qu'une bague, plus rare que l'or mais aussi poncée que ta mère!";
 });
-document.getElementById("ourson").addEventListener("click", function () {
-    document.getElementById("cadeaux-img").src = "img/icone/ourson.png";
-    document.getElementById("cadeaux-bg").style = "background-color:orange";
+
+    document.getElementById("ourson").addEventListener("click", function(){
+    document.getElementById("cadeaux-img").src="img/icone/ourson.png";
+    document.getElementById("cadeaux-bg").style="background-color:orange";
+    document.getElementById("value-c").innerHTML = '2';
+ 
     document.getElementById("cadeaux-title").innerHTML = "Ourson";
     document.getElementById("cadeaux-li").style = "display:block";
     document.getElementById("cadeaux-txt").innerHTML = "Un ourson chinois? Fabriqué par des petites mains encore plus petites que celle de ton gamin?";
 
 });
-document.getElementById("domino").addEventListener("click", function () {
-    document.getElementById("cadeaux-img").src = "img/icone/domino.png";
-    document.getElementById("cadeaux-bg").style = "background-color:green";
+
+    document.getElementById("domino").addEventListener("click", function(){
+    document.getElementById("cadeaux-img").src="img/icone/domino.png";
+    document.getElementById("cadeaux-bg").style="background-color:green";
+    document.getElementById("value-c").innerHTML = '1';
     document.getElementById("cadeaux-title").innerHTML = "Domino";
     document.getElementById("cadeaux-li").style = "display:block";
     document.getElementById("cadeaux-txt").innerHTML = "Tu apprends la logique, tu deviendras développeur pour être encore plus ethique !";
@@ -404,51 +417,64 @@ document.getElementById("domino").addEventListener("click", function () {
 });
 
 //section nourriture
-document.getElementById("canard").addEventListener("click", function () {
-    document.getElementById("nourriture-img").src = "img/icone/canard.png";
-    document.getElementById("nourriture-bg").style = "background-color:red";
+
+    document.getElementById("canard").addEventListener("click", function(){
+    document.getElementById("nourriture-img").src="img/icone/canard.png";
+    document.getElementById("nourriture-bg").style="background-color:red";
+    document.getElementById("value-n").innerHTML = '3';
+
     document.getElementById("nourriture-title").innerHTML = "Canard";
     document.getElementById("nourriture-li").style = "display:block";
     document.getElementById("nourriture-txt").innerHTML = "37 millions de canards et 700.000 oies sont gavées en France pour produire du foie gras.";
 });
-document.getElementById("fish").addEventListener("click", function () {
-    document.getElementById("nourriture-img").src = "img/icone/fish.png";
-    document.getElementById("nourriture-bg").style = "background-color:orange";
-    document.getElementById("nourriture-title").innerHTML = "Poisson";
-    document.getElementById("nourriture-li").style = "display:block";
-    document.getElementById("nourriture-txt").innerHTML = "Les polluants retrouvés dans le saumon d'élevage ont une mauvaise influence sur le développement du cerveau, et sont associés à l'autisme, à l'hyperactivité et à la baisse de QI.";
 
+document.getElementById("fish").addEventListener("click", function(){
+    document.getElementById("nourriture-img").src="img/icone/fish.png";
+    document.getElementById("nourriture-bg").style="background-color:orange";
+    document.getElementById("value-n").innerHTML = '2';
+    document.getElementById("nourriture-title").innerHTML = "Poisson";
+    document.getElementById("nourriture-li").style="display:block";
+    document.getElementById("nourriture-txt").innerHTML = "Les polluants retrouvés dans le saumon d'élevage ont une mauvaise influence sur le développement du cerveau, et sont associés à l'autisme, à l'hyperactivité et à la baisse de QI. D'où l'expression CON COMME UN SAUMON";
 });
-document.getElementById("vegetables").addEventListener("click", function () {
-    document.getElementById("nourriture-img").src = "img/icone/vegetables.png";
-    document.getElementById("nourriture-bg").style = "background-color:green";
+    document.getElementById("vegetables").addEventListener("click", function(){
+    document.getElementById("nourriture-img").src="img/icone/vegetables.png";
+    document.getElementById("nourriture-bg").style="background-color:green";
+    document.getElementById("value-n").innerHTML = '1';
+
     document.getElementById("nourriture-title").innerHTML = "Légumes";
     document.getElementById("nourriture-li").style = "display:block";
     document.getElementById("nourriture-txt").innerHTML = "Rien de tel qu'une bonne platrée de légumes pour chier bien mou";
-
 });
 
 //section deco
-document.getElementById("feuille").addEventListener("click", function () {
-    document.getElementById("deco-img").src = "img/icone/feuille.png";
-    document.getElementById("deco-bg").style = "background-color:green";
+
+    document.getElementById("feuille").addEventListener("click", function(){
+    document.getElementById("deco-img").src="img/icone/feuille.png";
+    document.getElementById("deco-bg").style="background-color:green";
+    document.getElementById("value-d").innerHTML = '1';
+
     document.getElementById("deco-title").innerHTML = "Feuilles";
     document.getElementById("deco-li").style = "display:block";
     document.getElementById("deco-txt").innerHTML = "Une belle promenade en forêt, un moment passé en famille, quelques feuilles devant la cheminée. Erreur 404... ";
 });
-document.getElementById("guirlande").addEventListener("click", function () {
-    document.getElementById("deco-img").src = "img/icone/guirlande.png";
-    document.getElementById("deco-bg").style = "background-color:orange";
+
+    document.getElementById("guirlande").addEventListener("click", function(){
+    document.getElementById("deco-img").src="img/icone/guirlande.png";
+    document.getElementById("deco-bg").style="background-color:orange";
+    document.getElementById("value-d").innerHTML = '2';
     document.getElementById("deco-title").innerHTML = "Guirlandes";
     document.getElementById("deco-li").style = "display:block";
     document.getElementById("deco-txt").innerHTML = "Un bien beau morceau de ficelle";
 
 });
-document.getElementById("sapin").addEventListener("click", function () {
-    document.getElementById("deco-img").src = "img/icone/sapin.png";
-    document.getElementById("deco-bg").style = "background-color:red";
+
+    document.getElementById("sapin").addEventListener("click", function(){
+    document.getElementById("deco-img").src="img/icone/sapin.png";
+    document.getElementById("deco-bg").style="background-color:red";
+    document.getElementById("value-d").innerHTML = '3';
     document.getElementById("deco-title").innerHTML = "Sapins";
     document.getElementById("deco-li").style = "display:block";
     document.getElementById("deco-txt").innerHTML = "Deux ans à pousser.... 1 mois à pourrir devant ta cheminée ou ton radiateur...";
 
 });
+

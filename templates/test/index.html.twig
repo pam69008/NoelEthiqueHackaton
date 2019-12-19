@@ -5,16 +5,20 @@
 {% block body %}
 
     <header class="masthead sky" style="background-image:url('img/village.jpg'); height:100vh;">
+
         <div class="bloodyChris">NO HELL ETHIC</div>
     <div class="container">
             <div class="intro-text textShadoo" style="">
-                <div class="intro-lead-in whiteTextNav" ><span>Welcome To Your Merry Christmas!!!</span></div>
-                <div class="intro-heading text-uppercase whiteTextNav"><span>Ton noel ethique pour un monde plus green</span></div>
+                <div class="intro-lead-in whiteTextNav"><span>Welcome To Your Merry Christmas!!!</span></div>
+                <div class="intro-heading text-uppercase whiteTextNav">
+                    <span>Ton noel ethique pour un monde plus green</span></div>
             </div>
-    </div>
+        </div>
 
     </header>
-    <section id="transport">
+    <section id="transport" >
+        <div id="santa">
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -54,7 +58,7 @@
                 <div class="col-md-4">
                     <a id="iphone"><img src="/img/icone/iphone.png" id="iphoneImage"></a>
                     {#mettre collapse#}
-                    <p class="paraIphone"  style="display: none">Merci grace à toi nous allons pouvoir boire du lithium</p>
+                    <p class="paraIphone"  style="display: none">Merci grace à toi nous allons pouvoir boire du lithium</p> 
                 </div>
                 <div class="col-md-4">
                     <a id="ourson"><img src="/img/icone/ourson.png" id="oursonImage"></a>
@@ -115,7 +119,9 @@
                 <div class="col-md-4">
                     <a id="feuille"><img src="/img/icone/feuille.png" id="feuilleImage"></a>
                     {#mettre collapse#}
+
                     <p class="paraFeuille" style="display: none">Une belle promenade en fôret, un moment passé en famille, quelques feuilles devant la cheminée. Un Noël enchanté.. </p>
+
                 </div>
                 <div class="col-md-4">
 
@@ -127,7 +133,8 @@
                 <div class="col-md-4">
                     <a id="sapin"><img src="/img/icone/sapin.png" id="sapinImage"></a>
                     {#mettre collapse#}
-                    <p class="paraSapin" style="display: none">Deux ans à pousser.... 1 mois à pourrir devant ta cheminée ou ton radiateur....</p>
+                    <p class="paraSapin" style="display: none">Deux ans à pousser.... 1 mois à pourrir devant ta
+                        cheminée ou ton radiateur....</p>
                 </div>
             </div>
         </div>
@@ -144,7 +151,8 @@
                 <div class="col-lg-12">
                     <ul class="list-group timeline">
                         <li id="transport-li" class="list-group-item" style="display: none">
-                            <div id="transport-bg" class="timeline-image"><img id="transport-img" class="rounded-circle img-fluid">
+                            <div id="transport-bg" class="timeline-image"><img id="transport-img"
+                                                                               class="rounded-circle img-fluid">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -156,7 +164,8 @@
                             </div>
                         </li>
                         <li id="cadeaux-li" class="list-group-item timeline-inverted" style="display: none">
-                            <div id="cadeaux-bg" class="timeline-image"><img id="cadeaux-img" class="rounded-circle img-fluid">
+                            <div id="cadeaux-bg" class="timeline-image"><img id="cadeaux-img"
+                                                                             class="rounded-circle img-fluid">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -168,7 +177,8 @@
                             </div>
                         </li>
                         <li id="nourriture-li" class="list-group-item" style="display: none">
-                            <div id="nourriture-bg" class="timeline-image"><img id="nourriture-img" class="rounded-circle img-fluid">
+                            <div id="nourriture-bg" class="timeline-image"><img id="nourriture-img"
+                                                                                class="rounded-circle img-fluid">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -180,7 +190,8 @@
                             </div>
                         </li>
                         <li id="deco-li" class="list-group-item timeline-inverted" style="display: none">
-                            <div id="deco-bg" class="timeline-image"><img id="deco-img" class="rounded-circle img-fluid">
+                            <div id="deco-bg" class="timeline-image"><img id="deco-img"
+                                                                          class="rounded-circle img-fluid">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -193,11 +204,24 @@
                         </li>
                         <li class="list-group-item timeline-inverted">
                             <div class="timeline-image">
-                                <h4>Be Part<br>&nbsp;Of Our<br>&nbsp;Story!</h4>
+                                <h4 id="mon-profil">Voir<br>mon<br>profil !</h4>
                             </div>
                         </li>
                     </ul>
                 </div>
+                <div id="value-t" style="display: none"></div>
+                <div id="value-c" style="display: none"></div>
+                <div id="value-n" style="display: none"></div>
+                <div id="value-d" style="display: none"></div>
+
+                {#resultat de la recherche#}
+                <div class="mt-5 d-flex flex-column">
+                    <img id="result-img" class="rounded-circle img-fluid align-self-center mb-3" height="200px" width="200px">
+                    <h4 id="result-title" class="w-50 ml-auto mr-auto text-center text-uppercase"></h4>
+                    <h5 id="result-sub" class="w-50 ml-auto mr-auto text-center text-muted"></h5>
+                    <p id="result-test" class="w-50 ml-auto mr-auto text-center"></p>
+                </div>
+
             </div>
         </div>
     </section>
@@ -449,10 +473,12 @@
     <iframe src="/sound/bell.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
     <iframe src="/sound/flou.mp3" allow="autoplay" id="audio1" style="display:none"></iframe>
     <iframe src="/sound/nohell.mp3" allow="autoplay" id="audio2" style="display:none"></iframe>
+    <iframe src="/sound/ohOhOh.mp3" allow="autoplay" id="audio3" style="display:none"></iframe>
     <div hidden>
         <p><audio src="/sound/bell.mp3" controls id="playerBell"></audio></p>
         <p><audio src="/sound/flou.mp3" controls id="playerFlou"></audio></p>
         <p><audio src="/sound/nohell.mp3" controls id="playerNohell"></audio></p>
+        <p><audio src="/sound/ohOhOh.mp3" controls id="playerOhOh"></audio></p>
 
     </div>
 {#    <audio controls autoplay>#}
@@ -464,5 +490,6 @@
 {% block javascripts %}
     {{ encore_entry_script_tags('test') }}
     {{ encore_entry_script_tags('navbarMec') }}
+    {{ encore_entry_script_tags('santaDude') }}
     {{ encore_entry_script_tags('mabite') }}
 {% endblock %}
