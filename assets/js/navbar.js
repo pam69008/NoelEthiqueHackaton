@@ -99,13 +99,38 @@ var couleur="#FFF";
     masthead.appendChild(canvas);
 })();
 
-//    coce Js pour gestion clic
+//    coce Js gestion body louche
 
 // url('img/village.jpg')
 var i = 0;
 var images = ["village.jpg", "village_rouge2.png"];
 
 $(document).ready(function () {
+    //
+    // Set effect on body
+    $( "body" ).click(function (){
+        shake();
+        return false;
+    });
+
+    //fct shake my booty
+    function shake() {
+        console.log('pppp');
+        var div = $('body');
+        var interval = 1;
+        var distance = 5;
+        var times = 20;
+
+        $(div).css('position', 'relative');
+
+        for (var iter = 0; iter < (times + 1) ; iter++) {
+            $(div).animate({
+                left: ((iter % 2 === 0 ? distance : distance * -1))
+            }, interval);
+        }
+        $(div).animate({ left: 0 }, interval);
+    }
+
     // si clic sur div class .sky
     $(".sky").click(function () {
         i++;
@@ -131,8 +156,15 @@ $(document).ready(function () {
     })
 // faire apparaitre les paragraphe au clic de l'icone
     $("#avion").click(function () {
+        // $(this:first-child).css('box-shadow', '10px 10px 5px #888')
         $('.paraAvion').toggle()
     })
+    $("#avion").click(function () {
+        $( "#avion > img" ).css('drop-shadow', '30px 10px 4px #4444dd');
+        // $('.paraAvion').toggle()
+    })
+
+
     $("#velo").click(function () {
         $('.paraVelo').toggle()
     })
