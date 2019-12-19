@@ -15,15 +15,15 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {% endblock %}
-    <script
-            src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
+
 </head>
 <body id="page-top">
+
 {% block body %}{% endblock %}
+{{ encore_entry_script_tags('app') }}
+
 {% block javascripts %}
-    {{ encore_entry_script_tags('app') }}
+
 {% endblock %}
 </body>
 </html>

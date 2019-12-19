@@ -8,14 +8,16 @@ body {
     src: url(bloodFont.ttf);
 }
 
-
 .textShadoo{
     text-shadow:0 0 50px red;
     margin-right: 25%;
     transition: transform 1s;
 }
 
-
 header.masthead  {
     text-decoration-color: yellow;
+}
+
+.bloodyChris {
+    position:absolute;
 }
