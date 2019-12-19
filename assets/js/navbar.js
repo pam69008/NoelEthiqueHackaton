@@ -125,8 +125,41 @@ $(document).ready(function () {
             });
         }
     })
-
-    $("#transport").click(function () {
-        alert('coaxis prout');
+// faire apparaitre les paragraphe au clic de l'icone
+    $("#avion").click(function () {
+        $('.paraAvion').toggle()
+    })
+    $("#velo").click(function () {
+        $('.paraVelo').toggle()
+    })
+    $("#voiture").click(function () {
+        $('.paraVoiture').toggle()
+    })
+    $("#iphone").click(function () {
+        $('.paraIphone').toggle()
+    })
+    $("#ourson").click(function () {
+        $('.paraOurson').toggle()
+    })
+    $("#domino").click(function () {
+        $('.paraDomino').toggle()
+    })
+    $("#canard").click(function () {
+        $('.paraCanard').toggle()
+    })
+    $("#fish").click(function () {
+        $('.paraFish').toggle()
+    })
+    $("#vegetables").click(function () {
+        $('.paraVegetables').toggle()
+    })
+    $("#feuille").click(function () {
+        $('.paraFeuille').toggle()
+    })
+    $("#guirlande").click(function () {
+        $('.paraGuirlande').toggle()
+    })
+    $("#sapin").click(function () {
+        $('.paraSapin').toggle()
     })
 });
