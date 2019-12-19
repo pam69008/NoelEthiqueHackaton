@@ -33,3 +33,12 @@ header.masthead  {
     display:none;
     text-shadow: #FFF 1px 0 10px;
 }
+
+#santa {
+    position:absolute ;
+    height:90px;
+    width:150px ;
+    background-image: url('../../public/img/santaClaus.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}

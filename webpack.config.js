@@ -26,6 +26,8 @@ Encore
     .addEntry('app', './assets/js/app.js')
     .addEntry('test', './assets/js/script.min.js')
     .addEntry('navbarMec' , './assets/js/navbar.js')
+    .addEntry('santaDude' , './assets/js/santa.js')
+
     //.addEntry('page2', './assets/js/page2.js')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
