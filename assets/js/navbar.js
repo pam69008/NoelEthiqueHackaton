@@ -198,4 +198,102 @@ $(document).ready(function () {
     $("#sapin").click(function () {
         $('.paraSapin').toggle()
     })
+    //changement de couleur des images
+    $('#imageCanard').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/canard.png')
+                ? '/img/icone/redCanard.png'
+                : '/img/icone/canard.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#imageFish').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/fish.png')
+                ? '/img/icone/yellowFish.png'
+                : '/img/icone/fish.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#imageVegetables').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/vegetables.png')
+                ? '/img/icone/greenVegetable.png'
+                : '/img/icone/vegetables.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#feuilleImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/feuille.png')
+                ? '/img/icone/greenFeuille.png'
+                : '/img/icone/feuille.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#sapinImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/sapin.png')
+                ? '/img/icone/redSapin.png'
+                : '/img/icone/sapin.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#guirlandeImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/guirlande.png')
+                ? '/img/icone/yellowGuirlande.png'
+                : '/img/icone/guirlande.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#iphoneImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/iphone.png')
+                ? '/img/icone/redIphone.png'
+                : '/img/icone/iphone.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#oursonImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/ourson.png')
+                ? '/img/icone/yellowOurson.png'
+                : '/img/icone/ourson.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#dominoImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/domino.png')
+                ? '/img/icone/greenDomino.png'
+                : '/img/icone/domino.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#veloImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/icons8-cyclisme-sur-route-100.png')
+                ? '/img/icone/greenBike.png'
+                : '/img/icone/icons8-cyclisme-sur-route-100.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#avionImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/icons8-aéroport-100.png')
+                ? '/img/icone/redAvion.png'
+                : '/img/icone/icons8-aéroport-100.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#voitureImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/icons8-voiture-100.png')
+                ? '/img/icone/yellowCar.png'
+                : '/img/icone/icons8-voiture-100.png';
+            $(this).attr('src', src);
+        }
+    });
+
 });
