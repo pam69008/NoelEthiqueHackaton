@@ -1,3 +1,4 @@
+
 body {
     background-color: lightgray;
 }
@@ -10,7 +11,7 @@ body {
 
 .textShadoo{
     text-shadow:0 0 50px red;
-    margin-right: 25%;
+    text-align: center;
     transition: transform 1s;
 }
 
@@ -20,4 +21,15 @@ header.masthead  {
 
 .bloodyChris {
     position:absolute;
+    left: 0px;
+    top:0px;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    margin-top:30vh;
+    font-family:myFirstFont ;
+    font-size: 100px;
+    color:#8a0303;
+    display:none;
+    text-shadow: #FFF 1px 0 10px;
 }

@@ -115,6 +115,8 @@ $(document).ready(function () {
                 $(this).css("background-image", "url(img/village_rouge2.png)");
                 $(this).fadeIn("slow");
                 couleur = '#8a0303';
+            $('.bloodyChris').css("display","block");
+            $('.whiteTextNav').css("display","none");
             });
         } else {
             $('.sky').css("background-image", "url(img/village_rouge2.png)");
@@ -122,6 +124,8 @@ $(document).ready(function () {
                 $(this).css("background-image", "url(img/village.jpg)");
                 $(this).fadeIn("slow");
                 couleur = '#FFF';
+                $('.bloodyChris').css("display","none");
+                $('.whiteTextNav').css("display","block");
             });
         }
     })
