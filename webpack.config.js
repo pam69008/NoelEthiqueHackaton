@@ -27,6 +27,7 @@ Encore
     .addEntry('test', './assets/js/script.min.js')
     .addEntry('navbarMec' , './assets/js/navbar.js')
     .addEntry('santaDude' , './assets/js/santa.js')
+    .addEntry('mabite' , './assets/js/result.js')
 
     //.addEntry('page2', './assets/js/page2.js')
 
