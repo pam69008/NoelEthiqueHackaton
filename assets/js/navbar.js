@@ -95,20 +95,21 @@ var couleur="#FFF";
 
     onResize();
     window.addEventListener('resize', onResize, false);
-
     masthead.appendChild(canvas);
 })();
 
-//    coce Js gestion body louche
 
 // url('img/village.jpg')
 var i = 0;
 var images = ["village.jpg", "village_rouge2.png"];
 
 $(document).ready(function () {
-    //
+
+
+
     // Set effect on body
     $( "body" ).click(function (){
+        // $("#player")[0].play();
         shake();
         return false;
     });
@@ -125,6 +126,7 @@ $(document).ready(function () {
 
         // mvt alea haut ou gauche
         var randomnumber = Math.floor(Math.random() * (2 + 1) + 0);
+            // Math.floor(Math.random() * (2 + 1) + 0);
 
         if (randomnumber === 0) {
             for (var iter = 0; iter < (times + 1) ; iter++) {
@@ -141,7 +143,7 @@ $(document).ready(function () {
             }
             $(div).animate({ left: 0 }, interval);
         } else {
-            var randomnumber2 = Math.floor(Math.random() * (500 + 1) + 100);
+            var randomnumber2 = Math.floor(Math.random() * (1000 + 1) + 400);
 
             var setBlur = function(ele, radius) {
                     $(ele).css({
@@ -172,12 +174,21 @@ $(document).ready(function () {
             // Start tweening towards blurred image
             window.setTimeout(function() {
                 tweenBlur('body', 0, 8);
-            }, randomnumber2);
+            }, 0);
+
+
 
             // Reverse tweening after 3 seconds
             window.setTimeout(function() {
                 tweenBlur('body', 8, 0);
-            }, randomnumber2);
+            }, 0);
+
+            window.setTimeout(function() {
+                $("#playerFlou")[0].play();
+            }, 1000);
+
+
+
         }
 
     }
@@ -193,14 +204,23 @@ $(document).ready(function () {
                 couleur = '#8a0303';
             $('.bloodyChris').css("display","block");
             $('.whiteTextNav').css("display","none");
+                $("#playerBell")[0].pause();
+                $("#playerFlou")[0].pause();
+                $("#playerNohell")[0].play();
             });
         } else {
+            $("#playerNohell")[0].pause();
+            $("#playerFlou")[0].pause();
+            $("#playerBell")[0].play();
+            $("#playerBell")[0].loop = true;
+
             $('.sky').css("background-image", "url(img/village_rouge2.png)");
             $('.sky').fadeOut("slow", function () {
                 $(this).css("background-image", "url(img/village.jpg)");
                 $(this).fadeIn("slow");
                 couleur = '#FFF';
                 $('.bloodyChris').css("display","none");
+
                 $('.whiteTextNav').css("display","block");
             });
         }

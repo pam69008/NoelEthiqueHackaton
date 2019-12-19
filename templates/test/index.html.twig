@@ -5,7 +5,7 @@
 {% block body %}
 
     <header class="masthead sky" style="background-image:url('img/village.jpg'); height:100vh;">
-        <div class="bloodyChris">MERRY CHRISTMAS MOTHER FUCKER</div>
+        <div class="bloodyChris">NO HELL ETHIC</div>
     <div class="container">
             <div class="intro-text textShadoo" style="">
                 <div class="intro-lead-in whiteTextNav" ><span>Welcome To Your Merry Christmas!!!</span></div>
@@ -448,6 +448,19 @@
             </div>
         </div>
     </div>
+    <iframe src="/sound/bell.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+    <iframe src="/sound/flou.mp3" allow="autoplay" id="audio1" style="display:none"></iframe>
+    <iframe src="/sound/nohell.mp3" allow="autoplay" id="audio2" style="display:none"></iframe>
+    <div hidden>
+        <p><audio src="/sound/bell.mp3" controls id="playerBell"></audio></p>
+        <p><audio src="/sound/flou.mp3" controls id="playerFlou"></audio></p>
+        <p><audio src="/sound/nohell.mp3" controls id="playerNohell"></audio></p>
+
+    </div>
+{#    <audio controls autoplay>#}
+{#        <source src="/sound/bell.mp3" type="audio/mpeg">#}
+{#        Your browser does not support the audio element.#}
+{#    </audio>#}
 {% endblock %}
 
 {% block javascripts %}
