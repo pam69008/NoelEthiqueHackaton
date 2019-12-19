@@ -118,17 +118,68 @@ $(document).ready(function () {
         console.log('pppp');
         var div = $('body');
         var interval = 1;
-        var distance = 5;
+        var distance = 2;
         var times = 20;
 
         $(div).css('position', 'relative');
 
-        for (var iter = 0; iter < (times + 1) ; iter++) {
-            $(div).animate({
-                left: ((iter % 2 === 0 ? distance : distance * -1))
-            }, interval);
+        // mvt alea haut ou gauche
+        var randomnumber = Math.floor(Math.random() * (2 + 1) + 0);
+
+        if (randomnumber === 0) {
+            for (var iter = 0; iter < (times + 1) ; iter++) {
+                $(div).animate({
+                    top: ((iter % 2 === 0 ? distance : distance * -1))
+                }, interval);
+            }
+            $(div).animate({ top: 0 }, interval);
+        } else if (randomnumber ===1 ) {
+            for (var iter = 0; iter < (times + 1) ; iter++) {
+                $(div).animate({
+                    left: ((iter % 2 === 0 ? distance : distance * -1))
+                }, interval);
+            }
+            $(div).animate({ left: 0 }, interval);
+        } else {
+            var randomnumber2 = Math.floor(Math.random() * (500 + 1) + 100);
+
+            var setBlur = function(ele, radius) {
+                    $(ele).css({
+                        "-webkit-filter": "blur("+radius+"px)",
+                        "filter": "blur("+radius+"px)"
+                    });
+                },
+
+                // Generic function to tween blur radius
+                tweenBlur = function(ele, startRadius, endRadius) {
+                    $({blurRadius: startRadius}).animate({blurRadius: endRadius}, {
+                        duration: randomnumber2,
+                        easing: 'swing', // or "linear"
+                                         // use jQuery UI or Easing plugin for more options
+                        step: function() {
+                            setBlur(ele, this.blurRadius);
+                        },
+                        complete: function() {
+                            // Final callback to set the target blur radius
+                            // jQuery might not reach the end value
+                            setBlur(ele, endRadius);
+                        }
+                    });
+                };
+
+
+
+            // Start tweening towards blurred image
+            window.setTimeout(function() {
+                tweenBlur('body', 0, 8);
+            }, randomnumber2);
+
+            // Reverse tweening after 3 seconds
+            window.setTimeout(function() {
+                tweenBlur('body', 8, 0);
+            }, randomnumber2);
         }
-        $(div).animate({ left: 0 }, interval);
+
     }
 
     // si clic sur div class .sky
