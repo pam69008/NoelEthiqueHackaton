@@ -21,18 +21,27 @@ header.masthead {
 }
 
 .bloodyChris {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-  margin-top: 30vh;
-  font-family: myFirstFont;
-  font-size: 100px;
-  color: #8a0303;
-  display: none;
-  text-shadow: #FFF 1px 0 10px;
+    position:absolute;
+    left: 0px;
+    top:0px;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    margin-top:30vh;
+    font-family:myFirstFont ;
+    font-size: 100px;
+    color:#8a0303;
+    display:none;
+    text-shadow: #FFF 1px 0 10px;
+}
+
+#santa {
+    position:absolute ;
+    height:90px;
+    width:150px ;
+    background-image: url('../../public/img/santaClaus.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 
