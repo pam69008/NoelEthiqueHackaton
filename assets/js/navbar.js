@@ -99,13 +99,89 @@ var couleur="#FFF";
     masthead.appendChild(canvas);
 })();
 
-//    coce Js pour gestion clic
+//    coce Js gestion body louche
 
 // url('img/village.jpg')
 var i = 0;
 var images = ["village.jpg", "village_rouge2.png"];
 
 $(document).ready(function () {
+    //
+    // Set effect on body
+    $( "body" ).click(function (){
+        shake();
+        return false;
+    });
+
+    //fct shake my booty
+    function shake() {
+        console.log('pppp');
+        var div = $('body');
+        var interval = 1;
+        var distance = 2;
+        var times = 20;
+
+        $(div).css('position', 'relative');
+
+        // mvt alea haut ou gauche
+        var randomnumber = Math.floor(Math.random() * (2 + 1) + 0);
+
+        if (randomnumber === 0) {
+            for (var iter = 0; iter < (times + 1) ; iter++) {
+                $(div).animate({
+                    top: ((iter % 2 === 0 ? distance : distance * -1))
+                }, interval);
+            }
+            $(div).animate({ top: 0 }, interval);
+        } else if (randomnumber ===1 ) {
+            for (var iter = 0; iter < (times + 1) ; iter++) {
+                $(div).animate({
+                    left: ((iter % 2 === 0 ? distance : distance * -1))
+                }, interval);
+            }
+            $(div).animate({ left: 0 }, interval);
+        } else {
+            var randomnumber2 = Math.floor(Math.random() * (500 + 1) + 100);
+
+            var setBlur = function(ele, radius) {
+                    $(ele).css({
+                        "-webkit-filter": "blur("+radius+"px)",
+                        "filter": "blur("+radius+"px)"
+                    });
+                },
+
+                // Generic function to tween blur radius
+                tweenBlur = function(ele, startRadius, endRadius) {
+                    $({blurRadius: startRadius}).animate({blurRadius: endRadius}, {
+                        duration: randomnumber2,
+                        easing: 'swing', // or "linear"
+                                         // use jQuery UI or Easing plugin for more options
+                        step: function() {
+                            setBlur(ele, this.blurRadius);
+                        },
+                        complete: function() {
+                            // Final callback to set the target blur radius
+                            // jQuery might not reach the end value
+                            setBlur(ele, endRadius);
+                        }
+                    });
+                };
+
+
+
+            // Start tweening towards blurred image
+            window.setTimeout(function() {
+                tweenBlur('body', 0, 8);
+            }, randomnumber2);
+
+            // Reverse tweening after 3 seconds
+            window.setTimeout(function() {
+                tweenBlur('body', 8, 0);
+            }, randomnumber2);
+        }
+
+    }
+
     // si clic sur div class .sky
     $(".sky").click(function () {
         i++;
@@ -131,8 +207,16 @@ $(document).ready(function () {
     })
 // faire apparaitre les paragraphe au clic de l'icone
     $("#avion").click(function () {
-        $('.paraAvion').toggle();
+
+        // $(this:first-child).css('box-shadow', '10px 10px 5px #888')
+        $('.paraAvion').toggle()
     })
+    $("#avion").click(function () {
+        $( "#avion > img" ).css('drop-shadow', '30px 10px 4px #4444dd');
+        // $('.paraAvion').toggle()
+    })
+
+
     $("#velo").click(function () {
         $('.paraVelo').toggle()
     })
@@ -166,6 +250,104 @@ $(document).ready(function () {
     $("#sapin").click(function () {
         $('.paraSapin').toggle()
     })
+    //changement de couleur des images
+    $('#imageCanard').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/canard.png')
+                ? '/img/icone/redCanard.png'
+                : '/img/icone/canard.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#imageFish').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/fish.png')
+                ? '/img/icone/yellowFish.png'
+                : '/img/icone/fish.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#imageVegetables').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/vegetables.png')
+                ? '/img/icone/greenVegetable.png'
+                : '/img/icone/vegetables.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#feuilleImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/feuille.png')
+                ? '/img/icone/greenFeuille.png'
+                : '/img/icone/feuille.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#sapinImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/sapin.png')
+                ? '/img/icone/redSapin.png'
+                : '/img/icone/sapin.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#guirlandeImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/guirlande.png')
+                ? '/img/icone/yellowGuirlande.png'
+                : '/img/icone/guirlande.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#iphoneImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/iphone.png')
+                ? '/img/icone/redIphone.png'
+                : '/img/icone/iphone.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#oursonImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/ourson.png')
+                ? '/img/icone/yellowOurson.png'
+                : '/img/icone/ourson.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#dominoImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/domino.png')
+                ? '/img/icone/greenDomino.png'
+                : '/img/icone/domino.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#veloImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/icons8-cyclisme-sur-route-100.png')
+                ? '/img/icone/greenBike.png'
+                : '/img/icone/icons8-cyclisme-sur-route-100.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#avionImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/icons8-aéroport-100.png')
+                ? '/img/icone/redAvion.png'
+                : '/img/icone/icons8-aéroport-100.png';
+            $(this).attr('src', src);
+        }
+    });
+    $('#voitureImage').on({
+        'click': function() {
+            var src = ($(this).attr('src') === '/img/icone/icons8-voiture-100.png')
+                ? '/img/icone/yellowCar.png'
+                : '/img/icone/icons8-voiture-100.png';
+            $(this).attr('src', src);
+        }
+    });
+
 });
 
 //section transport
