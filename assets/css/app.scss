@@ -1,22 +1,23 @@
 
 body {
-    background-color: lightgray;
+  background-color: lightgray;
 }
+
 @import "~bootstrap/scss/bootstrap";
 
 @font-face {
-    font-family: myFirstFont;
-    src: url(bloodFont.ttf);
+  font-family: myFirstFont;
+  src: url(bloodFont.ttf);
 }
 
-.textShadoo{
-    text-shadow:0 0 50px red;
-    text-align: center;
-    transition: transform 1s;
+.textShadoo {
+  text-shadow: 0 0 50px red;
+  text-align: center;
+  transition: transform 1s;
 }
 
-header.masthead  {
-    text-decoration-color: yellow;
+header.masthead {
+  text-decoration-color: yellow;
 }
 
 .bloodyChris {
@@ -33,3 +34,18 @@ header.masthead  {
     display:none;
     text-shadow: #FFF 1px 0 10px;
 }
+
+#santa {
+    position:absolute ;
+    height:90px;
+    width:150px ;
+    background-image: url('../../public/img/santaClaus.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+a {
+  cursor:url(http://sd-1.archive-host.com/membres/up/103617246114893015/curseur/fete/noel/curseur-noel-10.cur), auto;
+}
+
