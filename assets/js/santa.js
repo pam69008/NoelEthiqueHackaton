@@ -14,7 +14,7 @@ $(document).ready(function () {
         var posMax = [container.offsetWidth - elem.offsetWidth, container.offsetHeight - elem.offsetHeight];
         var position = [getRandomInt(posMax[0]), getRandomInt(posMax[1])];
 
-        var id = setInterval(frame, 100);
+        var id = setInterval(frame, 1);
 
         function frame() {
 
