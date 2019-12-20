@@ -206,7 +206,7 @@ $(document).ready(function () {
             $("#playerNohell")[0].pause();
             $("#playerFlou")[0].pause();
             $("#playerBell")[0].play();
-            $("#playerBell")[0].loop = true;
+            $("#playerBell")[0].loop = false;
 
             $('.sky').css("background-image", "url(img/village_rouge2.png)");
             $('.sky').fadeOut("slow", function () {
