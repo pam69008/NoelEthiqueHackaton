@@ -392,7 +392,7 @@ $(document).ready(function () {
 
     document.getElementById("cadeaux-title").innerHTML = "Iphone";
     document.getElementById("cadeaux-li").style = "display:block";
-    document.getElementById("cadeaux-txt").innerHTML = "Plus chère qu'une bague, plus rare que l'or mais aussi poncée que ta mère!";
+    document.getElementById("cadeaux-txt").innerHTML = "On le sait tous que le lithium est bon pour la santée!";
 });
 
     document.getElementById("ourson").addEventListener("click", function(){
@@ -434,7 +434,7 @@ document.getElementById("fish").addEventListener("click", function(){
     document.getElementById("value-n").innerHTML = '2';
     document.getElementById("nourriture-title").innerHTML = "Poisson";
     document.getElementById("nourriture-li").style="display:block";
-    document.getElementById("nourriture-txt").innerHTML = "Les polluants retrouvés dans le saumon d'élevage ont une mauvaise influence sur le développement du cerveau, et sont associés à l'autisme, à l'hyperactivité et à la baisse de QI. D'où l'expression CON COMME UN SAUMON";
+    document.getElementById("nourriture-txt").innerHTML = "Les polluants retrouvés dans le saumon d'élevage ont une mauvaise influence sur le développement du cerveau, et sont associés à l'autisme, à l'hyperactivité et à la baisse de QI.";
 });
     document.getElementById("vegetables").addEventListener("click", function(){
     document.getElementById("nourriture-img").src="img/icone/vegetables.png";
@@ -443,7 +443,7 @@ document.getElementById("fish").addEventListener("click", function(){
 
     document.getElementById("nourriture-title").innerHTML = "Légumes";
     document.getElementById("nourriture-li").style = "display:block";
-    document.getElementById("nourriture-txt").innerHTML = "Rien de tel qu'une bonne platrée de légumes pour chier bien mou";
+    document.getElementById("nourriture-txt").innerHTML = "Bon choix, il faut manger 5 fruits et légumes par jour";
 });
 
 //section deco
@@ -455,7 +455,7 @@ document.getElementById("fish").addEventListener("click", function(){
 
     document.getElementById("deco-title").innerHTML = "Feuilles";
     document.getElementById("deco-li").style = "display:block";
-    document.getElementById("deco-txt").innerHTML = "Une belle promenade en forêt, un moment passé en famille, quelques feuilles devant la cheminée. Erreur 404... ";
+    document.getElementById("deco-txt").innerHTML = "Une belle promenade en forêt, un moment passé en famille, quelques feuilles devant la cheminée. ";
 });
 
     document.getElementById("guirlande").addEventListener("click", function(){
